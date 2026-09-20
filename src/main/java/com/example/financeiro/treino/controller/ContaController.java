@@ -17,7 +17,7 @@ import com.example.financeiro.treino.service.ContaService;
 import lombok.AllArgsConstructor;
 
 @RestController 
-@RequestMapping("/conta")
+@RequestMapping("/api/conta")
 @AllArgsConstructor 
 public class ContaController {
     
