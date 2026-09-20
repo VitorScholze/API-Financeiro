@@ -21,12 +21,7 @@ public class ContaServiceImpl implements ContaService {
     
 
     public ContaDto criarConta(ContaDto dto){
-        Conta conta = new Conta();
-              conta.setId(dto.getId());
-              conta.setTitular(dto.getTitular());
-              conta.setTransacoes(dto.getTransacoes());
-              conta.setSaldo(dto.getSaldo());
-
+        Conta conta = ContaMapper.mapperToConta(dto);
         Conta contaSalva = contaRepository.save(conta);
 
         return ContaMapper.mapperToDto(contaSalva);

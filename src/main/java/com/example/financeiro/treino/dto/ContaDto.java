@@ -22,6 +22,6 @@ public class ContaDto {
 
     Double saldo;
 
-    List<Transacao> transacoes;
+    List<TransacaoDto> transacoes;
 }  
 

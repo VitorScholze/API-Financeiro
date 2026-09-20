@@ -1,7 +1,9 @@
 package com.example.financeiro.treino.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,8 +29,8 @@ public class Conta {
 
     private Double saldo;
 
-    @OneToMany(mappedBy = "conta")
-    private List<Transacao> transacoes;
+    @OneToMany(mappedBy = "conta", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Transacao> transacoes = new ArrayList<>();
 
 
 }
