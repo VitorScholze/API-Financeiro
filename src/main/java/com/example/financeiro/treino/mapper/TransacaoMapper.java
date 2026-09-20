@@ -13,6 +13,7 @@ public class TransacaoMapper {
         dto.setDescricao(transacao.getDescricao());
         dto.setTipo(transacao.getTipo());
         dto.setDataTime(transacao.getDataTime());
+        dto.setContaId(transacao.getContaId());
 
         return dto;
     }
@@ -26,6 +27,7 @@ public class TransacaoMapper {
         tran.setDescricao(dto.getDescricao());
         tran.setTipo(dto.getTipo());
         tran.setDataTime(dto.getDataTime());
+        tran.setContaId(dto.getContaId());
 
         return tran;
     }

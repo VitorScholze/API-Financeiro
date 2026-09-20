@@ -11,7 +11,10 @@ import com.example.financeiro.treino.mapper.ContaMapper;
 import com.example.financeiro.treino.repository.ContaRepository;
 import com.example.financeiro.treino.service.ContaService;
 
+import lombok.AllArgsConstructor;
+
 @Service 
+@AllArgsConstructor 
 public class ContaServiceImpl implements ContaService {
     
     private ContaRepository contaRepository;

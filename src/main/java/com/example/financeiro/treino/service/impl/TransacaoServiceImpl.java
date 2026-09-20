@@ -13,7 +13,10 @@ import com.example.financeiro.treino.repository.ContaRepository;
 import com.example.financeiro.treino.repository.TransacaoRepository;
 import com.example.financeiro.treino.service.TransacaoService;
 
+import lombok.AllArgsConstructor;
+
 @Service 
+@AllArgsConstructor 
 public class TransacaoServiceImpl implements TransacaoService{
 
     private TransacaoRepository transacaoRepository;
@@ -23,7 +26,7 @@ public class TransacaoServiceImpl implements TransacaoService{
             Conta conta = contaRepository.findById(contaId).orElseThrow(() -> new ContaException("Nenhuma conta encontrada!"));
 
             Transacao transacao  = TransacaoMapper.mapperToTransacao(transacaoDto);
-            transacao.setConta(conta);
+            transacao.setContaId(contaId);
 
             if(transacao.getTipo() == TipoTransacao.SAIDA){
                 if(transacao.getValor() > conta.getSaldo()){

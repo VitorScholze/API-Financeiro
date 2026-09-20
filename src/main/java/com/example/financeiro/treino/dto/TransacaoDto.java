@@ -26,5 +26,5 @@ public class TransacaoDto {
 
     private LocalDateTime dataTime;
 
-    private Conta conta;
+    private Long contaId;
 }
