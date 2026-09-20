@@ -26,7 +26,7 @@ public class TransacaoServiceImpl implements TransacaoService{
             Conta conta = contaRepository.findById(contaId).orElseThrow(() -> new ContaException("Nenhuma conta encontrada!"));
 
             Transacao transacao  = TransacaoMapper.mapperToTransacao(transacaoDto);
-            transacao.setContaId(contaId);
+            transacao.setConta(conta);
 
             if(transacao.getTipo() == TipoTransacao.SAIDA){
                 if(transacao.getValor() > conta.getSaldo()){

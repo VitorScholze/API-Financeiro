@@ -43,4 +43,12 @@ public class ContaController {
         ContaDto conta = contaService.procurarConta(id);
         return ResponseEntity.ok(conta);
     }
+
+
+
+    public ResponseEntity<String> deletarConta(Long id){
+        contaService.deletarConta(id);
+
+        return ResponseEntity.ok("Conta deletada com sucesso!");
+    }
 }

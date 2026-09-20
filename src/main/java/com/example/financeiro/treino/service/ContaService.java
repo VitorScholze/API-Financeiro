@@ -12,5 +12,5 @@ public List<ContaDto> listarContas();
 
 public ContaDto procurarConta(Long id);
 
-
+public String deletarConta(Long id);
 }

@@ -45,5 +45,16 @@ public class ContaServiceImpl implements ContaService {
 
         return ContaMapper.mapperToDto(conta);
     }
+
+
+
+    public String deletarConta(Long id){
+        
+        Conta conta = contaRepository.findById(id).orElseThrow(() -> new ContaException("Conta nao encontrada com este ID"));
+
+        contaRepository.delete(conta);
+
+        return "Conta deletada com sucesso!";
+    }
     
 }

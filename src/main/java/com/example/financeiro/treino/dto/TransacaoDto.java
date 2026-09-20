@@ -1,8 +1,6 @@
 package com.example.financeiro.treino.dto;
 
 import java.time.LocalDateTime;
-
-import com.example.financeiro.treino.entity.Conta;
 import com.example.financeiro.treino.entity.TipoTransacao;
 
 import lombok.AllArgsConstructor;
